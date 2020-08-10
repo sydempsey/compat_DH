@@ -67,9 +67,8 @@ def calc_compat(applicant_arr, t_intel, t_str, t_end, t_spicy):
     else:
         spicy = (spicy/t_spicy)*0.05
 
-    #Sum up the applicants total score
+    #Sum up the applicants total score and add to array
     score = intelligence + strength + endurance + spicy 
-    
     final.append(score)
     return final
 
@@ -79,6 +78,7 @@ def calc_compat(applicant_arr, t_intel, t_str, t_end, t_spicy):
 #########     Main      #############
 #####################################
 
+#Open data file
 data = json.load(open('data.json'))
 
 
